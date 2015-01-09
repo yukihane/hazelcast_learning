@@ -1,4 +1,4 @@
-package com.github.yukihane.hazelcast;
+package com.github.yukihane.hazelcast.ch02;
 
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
