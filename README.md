@@ -13,3 +13,9 @@ com.hazelcast.examples.TestApp というクラスは無くなり, 代わりに
 com.hazelcast.console.ConsoleApp というクラスになっています.
 おそらく3.3以降からの変更です.
 (参考: https://github.com/hazelcast/hazelcast/pull/2683 )
+
+### Predicates
+
+引数の型や戻り値の型が大きく変わっています.
+https://github.com/hazelcast/hazelcast/commit/c127cde52cfa89018605f361ea8f513b4a8da34f
+
