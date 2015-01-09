@@ -17,5 +17,6 @@ com.hazelcast.console.ConsoleApp というクラスになっています.
 ### Predicates
 
 引数の型や戻り値の型が大きく変わっています.
+おそらく3.0からの変更です.
 https://github.com/hazelcast/hazelcast/commit/c127cde52cfa89018605f361ea8f513b4a8da34f
 
