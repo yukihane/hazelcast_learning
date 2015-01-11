@@ -20,3 +20,28 @@ com.hazelcast.console.ConsoleApp というクラスになっています.
 おそらく3.0からの変更です.
 https://github.com/hazelcast/hazelcast/commit/c127cde52cfa89018605f361ea8f513b4a8da34f
 
+### cluster_wide_map_size (hazelcast.xml内)
+
+cluster_wide_map_size という設定はなくなっています.
+https://github.com/hazelcast/hazelcast/commit/fcc78a596a58ac9c74380dcd18e5218dfccb3b58
+
+ver.2では
+* map_size_per_jvm
+* cluster_wide_map_size
+* partitions_wide_map_size
+* used_heap_size
+* used_heap_percentage
+
+の5種類だったものが, ver.3では
+* PER_NODE (上のURLの変更ではPER_JVMとなっていますが, それから更に変更されています)
+* PER_PARTITION
+* USED_HEAP_PERCENTAGE
+* USED_HEAP_SIZE
+
+の4種類になっていました.
+
+本書の文脈的には, PER_NODE で置換すれば良いと思われます.
+
+[マニュアル](http://docs.hazelcast.org/docs/3.4/manual/html-single/hazelcast-documentation.html)には下記の記述があります.
+> In 2.x releases, the default value for max-size eviction policy was cluster_wide_map_size. In 3.x releases, default is PER_NODE. After upgrading, the max-size should be set according to this new default, if it is not changed. Otherwise, it is likely that OutOfMemory exception may be thrown.
+

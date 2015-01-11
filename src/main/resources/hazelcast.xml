@@ -192,6 +192,18 @@
 
     </map>
 
+    <map name="capitals">
+	<max-size policy="PER_NODE">10</max-size>
+	<eviction-policy>LFU</eviction-policy>
+	<eviction-percentage>20</eviction-percentage>
+
+	<backup-count>1</backup-count>
+	<async-backup-count>1</async-backup-count>
+
+	<time-to-live-seconds>86400</time-to-live-seconds>
+	<max-idle-seconds>3600</max-idle-seconds>
+    </map>
+
     <multimap name="default">
         <backup-count>1</backup-count>
         <value-collection-type>SET</value-collection-type>
