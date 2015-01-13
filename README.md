@@ -3,12 +3,17 @@
 書籍 [Getting Started with Hazelcast](https://www.packtpub.com/big-data-and-business-intelligence/getting-started-hazelcast) (Kindle版であればAmazon.co.jpでも購入できます)の内容を理解するために, 書籍の内容を私が書き写したものです.
 ただし, 書籍が対象としているHazelcastのバージョンが2.6であるのに対し, 私が用いているバージョンは現時点での最新版3.4であるため修正している箇所もあります.
 
-なお, 出版社のページから正式のコードをダウンロードすることができます(私は参照していませんが).
+なお, 出版社のページから正式なコードをダウンロードすることができます(私は参照していませんが).
 * https://www.packtpub.com/books/content/support/13880
+
 
 # 備考
 
 ## Hazelcast 2.6 と 3.4 の差異
+
+Hazelcast公式blogに[What's new in Hazelcast 3?](http://blog.hazelcast.com/2013/06/03/whats-new-in-hazelcast-3/)というエントリがありましたので, こちらも参考になるかもしれません.
+
+また, マニュアルには[Upgrading from 2.x versions](http://docs.hazelcast.org/docs/3.4/manual/html/upgradingfrom2x.html)というセクションがあります.
 
 ### TestApp
 
@@ -47,4 +52,13 @@ ver.2では
 
 余談になりますが, [マニュアル](http://docs.hazelcast.org/docs/3.4/manual/html-single/hazelcast-documentation.html)には下記の記述があります.
 > In 2.x releases, the default value for max-size eviction policy was cluster_wide_map_size. In 3.x releases, default is PER_NODE. After upgrading, the max-size should be set according to this new default, if it is not changed. Otherwise, it is likely that OutOfMemory exception may be thrown.
+
+### HazelcastInstance#getTransaction()
+
+getTransaction() というメソッドは無くなっており, 代わりに newTransactionContext(TransactionOptions) を使用すべきであるように見えます.
+https://github.com/hazelcast/hazelcast/commit/6657a3dad1d1c5631f71f0d23f1ad397169a5666
+
+[マニュアル](http://docs.hazelcast.org/docs/3.4/manual/html-single/hazelcast-documentation.html#transaction-interface)にコードサンプルがあるのですが, このように実装してもrepeatable readになりませんでした(transaction中の2回目のgetでConsoleAppの方で変更した内容に変わってしまう).
+
+これについては[#4414](https://github.com/hazelcast/hazelcast/issues/4414)としてissueを挙げてみました.
 
