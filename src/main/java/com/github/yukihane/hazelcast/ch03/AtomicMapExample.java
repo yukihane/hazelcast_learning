@@ -1,15 +1,16 @@
 package com.github.yukihane.hazelcast.ch03;
 
+import java.util.Map;
+
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IMap;
 
 public class AtomicMapExample {
 
     public static void main(final String[] args) {
         final HazelcastInstance hz = Hazelcast.newHazelcastInstance();
 
-        final IMap<String, String> capitals = hz.getMap("capitals");
+        final Map<String, String> capitals = hz.getMap("capitals");
 
         capitals.putIfAbsent("GB", "Winchester");
         System.err.println("Capital of GB (until 1066): " + capitals.get("GB"));

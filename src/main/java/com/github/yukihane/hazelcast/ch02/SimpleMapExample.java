@@ -1,10 +1,11 @@
 package com.github.yukihane.hazelcast.ch02;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IList;
-import com.hazelcast.core.IMap;
-import com.hazelcast.core.ISet;
 
 public class SimpleMapExample {
     public static void main(final String[] args) {
@@ -13,7 +14,7 @@ public class SimpleMapExample {
 
         final HazelcastInstance hz = Hazelcast.newHazelcastInstance();
 
-        final IMap<String, String> capitals = hz.getMap("capitals");
+        final Map<String, String> capitals = hz.getMap("capitals");
         capitals.put("GB", "London");
         capitals.put("FR", "Paris");
         capitals.put("US", "Washington DC");
@@ -24,13 +25,13 @@ public class SimpleMapExample {
 
         // Sec. Sets, lists, and queues
 
-        final ISet<String> cities = hz.getSet("cities");
+        final Set<String> cities = hz.getSet("cities");
         cities.addAll(capitals.values());
         cities.add("London");
         cities.add("Rome");
         cities.add("New York");
 
-        final IList<String> countries = hz.getList("countries");
+        final List<String> countries = hz.getList("countries");
         countries.addAll(capitals.keySet());
         countries.add("CA");
         countries.add("DE");

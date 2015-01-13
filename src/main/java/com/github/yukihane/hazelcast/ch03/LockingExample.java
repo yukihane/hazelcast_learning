@@ -2,10 +2,10 @@ package com.github.yukihane.hazelcast.ch03;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.ILock;
 
 /**
  * 複数の端末から
@@ -17,7 +17,7 @@ public class LockingExample {
     public static void main(final String[] args) throws InterruptedException {
         final HazelcastInstance hz = Hazelcast.newHazelcastInstance();
 
-        final ILock lock = hz.getLock("theTime");
+        final Lock lock = hz.getLock("theTime");
 
         while (true) {
             if (lock.tryLock(30, TimeUnit.SECONDS)) {
