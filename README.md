@@ -3,6 +3,9 @@
 書籍 [Getting Started with Hazelcast](https://www.packtpub.com/big-data-and-business-intelligence/getting-started-hazelcast) (Kindle版であればAmazon.co.jpでも購入できます)の内容を理解するために, 書籍の内容を私が書き写したものです.
 ただし, 書籍が対象としているHazelcastのバージョンが2.6であるのに対し, 私が用いているバージョンは現時点での最新版3.4であるため修正している箇所もあります.
 
+なお, 出版社のページから正式のコードをダウンロードすることができます(私は参照していませんが).
+* https://www.packtpub.com/books/content/support/13880
+
 # 備考
 
 ## Hazelcast 2.6 と 3.4 の差異
