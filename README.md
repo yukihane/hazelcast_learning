@@ -42,6 +42,6 @@ ver.2では
 
 本書の文脈的には, PER_NODE で置換すれば良いと思われます.
 
-[マニュアル](http://docs.hazelcast.org/docs/3.4/manual/html-single/hazelcast-documentation.html)には下記の記述があります.
+余談になりますが, [マニュアル](http://docs.hazelcast.org/docs/3.4/manual/html-single/hazelcast-documentation.html)には下記の記述があります.
 > In 2.x releases, the default value for max-size eviction policy was cluster_wide_map_size. In 3.x releases, default is PER_NODE. After upgrading, the max-size should be set according to this new default, if it is not changed. Otherwise, it is likely that OutOfMemory exception may be thrown.
 
