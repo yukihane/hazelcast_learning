@@ -79,3 +79,9 @@ https://github.com/hazelcast/hazelcast/commit/6657a3dad1d1c5631f71f0d23f1ad39716
 DistributedObjectListener に名称変更されたようです.
 
 https://github.com/hazelcast/hazelcast/commit/220818af62eb756aca41b2b883019e57c6144917
+
+### MembershipListener
+
+memberAttributeChanged メソッドが追加されています.
+
+https://github.com/hazelcast/hazelcast/commit/2f6cd31ddf050df7ea9831c3304950e983e32eef#diff-658bea041467495ff7235c9cc777df53R51
