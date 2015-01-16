@@ -74,3 +74,8 @@ https://github.com/hazelcast/hazelcast/commit/6657a3dad1d1c5631f71f0d23f1ad39716
 ここでは以下のjavadocコメントが追加されています.
 > This interface is here for backward compatibility reasons. For a most appropriate alternative please use/check link com.hazelcast.map.listener.MapListener interface.
 
+### InstanceListener
+
+DistributedObjectListener に名称変更されたようです.
+
+https://github.com/hazelcast/hazelcast/commit/220818af62eb756aca41b2b883019e57c6144917
