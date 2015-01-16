@@ -62,3 +62,15 @@ https://github.com/hazelcast/hazelcast/commit/6657a3dad1d1c5631f71f0d23f1ad39716
 
 これについては[#4414](https://github.com/hazelcast/hazelcast/issues/4414)としてissueを挙げてみました.
 
+### EntryListener
+
+2つのメソッドが追加されていました.
+* [Adds new method evictAll to IMap #2706](https://github.com/hazelcast/hazelcast/pull/2706)
+* [mapCleared is added to EntryListener #2790](https://github.com/hazelcast/hazelcast/pull/2790)
+
+なお, 次バージョンのv3.5でも変更が入るように見えます.
+* [Introduces new MapListener interface and sub-interfaces #4370](https://github.com/hazelcast/hazelcast/pull/4370)
+
+ここでは以下のjavadocコメントが追加されています.
+> This interface is here for backward compatibility reasons. For a most appropriate alternative please use/check link com.hazelcast.map.listener.MapListener interface.
+
