@@ -9,6 +9,8 @@ public class ClusterListeningExample {
     public static void main(final String[] args) {
         final Config config = new Config();
         config.addListenerConfig(new ListenerConfig(new ClusterInstanceListener()));
+        config.addListenerConfig(new ListenerConfig(new ClusterMembershipListener()));
+        config.addListenerConfig(new ListenerConfig(new NodeLifecycleListener()));
 
         final HazelcastInstance hz = Hazelcast.newHazelcastInstance(config);
     }
