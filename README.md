@@ -85,3 +85,10 @@ https://github.com/hazelcast/hazelcast/commit/220818af62eb756aca41b2b883019e57c6
 memberAttributeChanged メソッドが追加されています.
 
 https://github.com/hazelcast/hazelcast/commit/2f6cd31ddf050df7ea9831c3304950e983e32eef#diff-658bea041467495ff7235c9cc777df53R51
+
+### MultiTask
+
+[Upgrading from 2.x versions](http://docs.hazelcast.org/docs/3.4/manual/html/upgradingfrom2x.html) より:
+> Classes MultiTask and DistributedTask have been removed. All the functionality is supported by the newly presented interface IExecutorService. Please see the [Executor Service section](http://docs.hazelcast.org/docs/3.4/manual/html/distributedcomputing.html).
+
+
