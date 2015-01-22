@@ -91,4 +91,15 @@ https://github.com/hazelcast/hazelcast/commit/2f6cd31ddf050df7ea9831c3304950e983
 [Upgrading from 2.x versions](http://docs.hazelcast.org/docs/3.4/manual/html/upgradingfrom2x.html) より:
 > Classes MultiTask and DistributedTask have been removed. All the functionality is supported by the newly presented interface IExecutorService. Please see the [Executor Service section](http://docs.hazelcast.org/docs/3.4/manual/html/distributedcomputing.html).
 
+### HazelcastInstance#getExecutorService()
+
+引数なしのgetExecutorServiceメソッドは削除されています.
+
+https://github.com/hazelcast/hazelcast/commit/69b0510cbc966f2a05f7ff011fc2e0011804f40d#diff-3ada804019ddd1caf610f3b1b394743bL138
+
+### DistributedMemberInfoCallable
+
+[コメントアウトされ](https://github.com/hazelcast/hazelcast/commit/b6d87bd7278fe73b69a8602d3f97db171cf45ebf), その後[削除されています](https://github.com/hazelcast/hazelcast/commit/a89267442e5aecf1f1f7b513e228b1c27b4d7797).
+
+同等の情報を取得する方法はわかりませんでした.
 
