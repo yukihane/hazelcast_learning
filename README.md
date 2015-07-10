@@ -62,6 +62,11 @@ https://github.com/hazelcast/hazelcast/commit/6657a3dad1d1c5631f71f0d23f1ad39716
 
 これについては[#4414](https://github.com/hazelcast/hazelcast/issues/4414)としてissueを挙げてみました.
 
+[追記]
+ドキュメントの記述が誤りで, REPEATABLE_READではなく通常READ_COMMITEDで取り扱われます. そのように[ドキュメントが修正されました](https://github.com/hazelcast/hazelcast/commit/15a3e5b0a066ebc4a05df536cd295047e4b5c963).
+また, 以下の追記がなされています.
+> NOTE: The REPEATABLE_READ isolation level can also be exercised using the method getForUpdate() of TransactionalMap.
+
 ### EntryListener
 
 2つのメソッドが追加されていました.
